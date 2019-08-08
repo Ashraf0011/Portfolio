@@ -5,7 +5,9 @@
 // after that we will import that file here just like:
 // 
 //   @import 'config';    we will NOT USE '_config.scss' only 'config'
+
 @import 'config';
+@import 'menu';
 
 *{
     box-sizing: border-box;

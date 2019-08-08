@@ -1,0 +1,43 @@
+// menu buttom
+
+.menu-btn{
+
+    position: absolute;
+    right: 35px;
+    top: 35px;  
+    z-index: 3;
+    @include colorChange;
+   
+    .btn-line{
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #ffff;
+        @include colorChange;
+        
+    }
+
+    // rotate into x axis
+    &.close{
+        transform: rotate(180deg);
+        .btn-line{
+            // rotating 1st line
+            &:nth-child(1){
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            // hiding second line
+            &:nth-child(2){
+                opacity: 0;
+            }
+            // rotating 3rd line
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+        }
+    }
+
+
+
+
+}
