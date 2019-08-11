@@ -6,7 +6,7 @@
     right: 35px;
     top: 35px;  
     z-index: 3;
-    @include colorChange;
+    @include colorChange();
    
     .btn-line{
         width: 28px;
@@ -16,7 +16,6 @@
         @include colorChange;
         
     }
-
     // rotate into x axis
     &.close{
         transform: rotate(180deg);
@@ -33,11 +32,101 @@
             &:nth-child(3){
                 transform: rotate(-45deg) translate(7px, -6px);
             }
+        }
+    }
+}
+// menu overlay
+.menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    // to see through the background 
+    opacity:0.9;
+    // when we press the button show class will be added
+    visibility: hidden;
+    &.show{
+        visibility: visible;
+    }
+    // this is the common styling for both image- branding and side by side menu-navigtion
+    &-branding, &-nav{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
 
+    }
+    // here we eill do the saperate design for nave and branding
+    // nav
+    &-nav{
+        margin: 0%;
+        padding: 0%;
+        background: darken($color: $primary-color, $amount: 1);
+        list-style: none;
+        // hiding it above the screen
+        transform: translate3d(0,-100%,0);
+        @include colorChange();
+        &.show{
+            // slide down from top
+            transform: translate3d(0,0,0);
+        }
+    }
+   
+    // branding
+    &-branding{
+        background: $primary-color;
+        // hiding below the screen
+        transform: translate3d(0,100%,0);
+        @include colorChange();
+       
+        &.show{
+            // sliding up to the view 
+            transform: translate3d(0,0,0);
+        }
+        .protrait{
+            width: 250px;
+            height: 250px;
+            background: url(/dist/imgs/me.png);
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+    }
+    .nav-item{
+        // sliging in from right 
+        transform: translate3d(600px,0,0);
+        @include colorChange();
+
+        &.show{
+            // slide down from right
+            transform: translate3d(0,0,0);
+        }
+        &.current > a {
+            color: $secondary-color;
+        }
+       
+        // styling the page links
+        .nav-link{
+            display: inline-block;
+            position: relative;
+            font-size: 30px;
+            text-transform: uppercase;
+            padding: 1rem;
+            color: #ffff;
+            text-decoration: none;
+            @include colorChange;
+            &:hover{
+                color: $secondary-color;
+            }
         }
     }
 
-
-
-
+}
+// we are going to use sass-for-loop to  delaying each item
+@for $x from 1 through 4{
+    .nav-item:nth-child( #{ $x } ){ 
+        transition-delay: $x * 0.1s;
+    }
 }
