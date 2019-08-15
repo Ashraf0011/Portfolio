@@ -1,9 +1,15 @@
 // widescreens
 @include mediaXl{
+    .projects{
+        grid-template-columns: repeat(4, 1fr);
+    }
 
 }
 // Desktop and Laptops
 @include mediaLg{
+    .projects{
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 }
 // tablates and smaloo laptop
@@ -47,6 +53,12 @@
     .bio-image{
        margin-left: 23%;
     }
+
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
 }
 
 
@@ -63,4 +75,8 @@
     .bio-image{
         margin-left: 10px;
      }
+
+     .projects{
+        grid-template-columns: 1fr;
+    }
 }
