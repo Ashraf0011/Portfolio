@@ -33,6 +33,26 @@
         transform: translate3d(100%,0,0);
         font-size: 1rem;
     }
+
+
+    .about-info{
+    grid-template-areas: 
+    'bioimage'
+    'bio'
+    'job1'
+    'job2'
+    'job3';
+    grid-template-columns: 1fr;
+   
+    .bio-image{
+       margin-left: 23%;
+    }
+}
+
+
+
+
+
 }
 // smart phones
 @include mediaSm{
@@ -40,4 +60,7 @@
         margin-top: 10vh;
     }
 
+    .bio-image{
+        margin-left: 10px;
+     }
 }
