@@ -1,4 +1,3 @@
-
 // we can put all variables and mixins in different file.
 // it will be called as partials. Partials file has different naming systems
 //  _config.scss   is an example.
@@ -10,12 +9,12 @@
 @import 'menu';
 // @import 'mobile';  we want the mobile scss run after all elements are being formed so we are going to put it at the end
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    @include background();
+body {
+    // @include background();
     background: $primary-color;
 
     color: set-text-color($primary-color);
@@ -24,12 +23,17 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     font-weight: 400;
-    &.lg-heading{
+
+    &.lg-heading {
         font-size: 3rem;
     }
-    &.sm-heading{
+
+    &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
         // background: lighten( $primary-color,  2)
@@ -38,117 +42,131 @@ h1,h2,h3{
         background: rgba(lighten($color: $primary-color, $amount: 10), 0.5)
     }
 }
-a{
+
+a {
     color: #FFFF;
     text-decoration: none;
 }
-header{
+
+header {
     position: fixed;
     z-index: 2;
     width: 100%
 }
 
-.text-secondary{
+.text-secondary {
     color: $secondary-color;
 }
-main{
+
+main {
     padding: 4rem;
     min-height: calc(100vh - 60px);
-    .icons{
+
+    .icons {
         margin-top: 1rem;
-        a{
+
+        a {
             padding: 0.5rem;
-            &:hover{
+
+            &:hover {
                 color: $secondary-color;
                 @include colorChange();
             }
         }
     }
-    &#home{
-       overflow: hidden;
-        h1{
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
             margin-top: 8vh;
         }
     }
 }
 
 
-.about-info{
+.about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: 
-    'bioimage bio bio'
-    'job1 job2 job3';
+    grid-template-areas:
+        'bioimage bio bio'
+        'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
 
-    
-    .bio-image{
+
+    .bio-image {
         width: 250px;
         height: 250px;
         border-radius: 50%;
-        border:  $secondary-color 3px solid;
+        border: $secondary-color 3px solid;
         grid-area: bioimage;
     }
-    .bio{
+
+    .bio {
         grid-area: bio;
         font-size: 1.5rem;
     }
-    .job-1{
+
+    .job-1 {
         grid-area: job1;
         border-bottom: $secondary-color 3px solid;
     }
-    .job-2{
+
+    .job-2 {
         grid-area: job2;
         border-bottom: $secondary-color 3px solid;
     }
-    .job-3{
+
+    .job-3 {
         grid-area: job3;
         border-bottom: $secondary-color 3px solid;
     }
-    
-    .job{
+
+    .job {
         background: lighten($color: $primary-color, $amount: 5);
         padding: 0.6rem;
     }
 }
+
 // work projects
-.projects{
+.projects {
     display: grid;
     grid-gap: 0.8rem;
     grid-template-columns: repeat(3, 1fr);
-   
-    img{
+
+    img {
         width: 100%;
         border: 3px #FFFF solid;
-        
-        &:hover{
+
+        &:hover {
             opacity: 0.5;
             border: $secondary-color;
             // @include colorChange();
         }
     }
 }
+
 // contract page
-.boxes{
+.boxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 0.2rem;
 
-    div{
+    div {
         font-size: 2rem;
         border: 3px #fff solid;
         padding: 1.5rem 2.5rem;
         margin-bottom: 2rem;
         @include colorChange();
 
-        &:hover{
-           
+        &:hover {
+
             background: $secondary-color;
             color: set-text-color($secondary-color);
 
-            span{
+            span {
                 color: set-text-color($secondary-color);
             }
         }
@@ -157,35 +175,37 @@ main{
 
 
 // button styleing
-.btn{
+.btn {
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
 
-    &:hover{
+    &:hover {
         background: $secondary-color;
         color: set-text-color($secondary-color);
 
     }
 }
-.btn-light{
-    @extend .btn ;
+
+.btn-light {
+    @extend .btn;
     background: darken($color: $primary-color, $amount: 20);
     color: #FFFF;
 }
-.btn-dark{
-    @extend .btn ;
+
+.btn-dark {
+    @extend .btn;
     background: lighten($color: $primary-color, $amount: 20);
     color: #333333;
 }
 
 
 
-#main-footer{
+#main-footer {
     text-align: center;
     padding: 1rem;
-    background: darken($primary-color,  3);
+    background: darken($primary-color, 3);
 }
 
 @import 'mobile';
