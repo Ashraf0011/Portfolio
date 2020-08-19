@@ -1,82 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <script language="javascript" type="text/javascript" src="js/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/particle.js"></script>
+    <script language="javascript" type="text/javascript" src="js/clinePerlinNoise.js"></script>
     <title>About Me</title>
 </head>
+
 <body>
     <!-- <div class="overlay"></div> -->
     <header>
         <div class="menu-btn">
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
         </div>
-       <nav class="menu">
-           <div class="menu-branding">
-            <div class="protrait"></div>
-           </div>
-           <ul class="menu-nav">
-               <li class="nav-item ">
-                   <a href="index.html" class="nav-link">Home </a>
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="protrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item ">
+                    <a href="index.html" class="nav-link">Home </a>
                 </li>
-               <li class="nav-item current">
-                   <a href="about.html" class="nav-link">About Me</a>
+                <li class="nav-item current">
+                    <a href="about.html" class="nav-link">About Me</a>
                 </li>
-               <li class="nav-item">
-                   <a href="work.html" class="nav-link">My Work</a>
+                <li class="nav-item">
+                    <a href="work.html" class="nav-link">My Work</a>
                 </li>
-               <li class="nav-item">
-                   <a href="contract.html" class="nav-link">Contract me
-                </a></li>
-           </ul>
-       </nav>
+                <li class="nav-item">
+                    <a href="contract.html" class="nav-link">Contract me
+                    </a></li>
+            </ul>
+        </nav>
     </header>
     <main id="home">
         <h1 class="lg-heading">About <span class="text-secondary">Me</span>
-            
+
         </h1>
         <h2 class="sm-heading">Here's some information about myself.</h2>
 
         <div class="about-info">
-           <img class="bio-image" src="imgs/me.png" alt="ashraful">
+            <img class="bio-image" src="imgs/me.png" alt="ashraful">
             <div class="bio">
                 <div class="text-secondary">BIO</div>
-                <p>Md Ashraful Islam is currently working as an ICT Field Engineer at Best Technology Services since 2017. Mostly working ICT Level 1 and 2 jobs in and around Darwin, Northern Territory. This job requires a wide range of activity including helping customers with computer operation,
-                    Installing new computer and network hardware. Upgrading systems, servers and network devices. Apart from that making recommendation and report to meet cunsumer requirements. <br><br> I would like to mentaion that I have developed Time saving skills, technical communication though my experiences in current job.
-                <br><br> I was proud to work for NEC's nation wide EFT-Pos machine upgrade project in 2018 where I had to travel to Alice Spring from Darwin and left my signeture in well known companies like Woolwoths, Coles, Australia Post, Kmart.
-                <br><br> Outside my work, I'm a happy Single man :) . <br>I grew up with my younger brother in a Large City called "Dhaka" in Bangladesh. Console/Computer Games are my favourite. And while im not doing anything i'll be planting trees/"Gardening" i'd like to say it.
-                    I also like to listen to Passenger, Coldplay and Jhon Denver music. 
-            </p>
+                <p>Md Ashraful Islam is currently working as an ICT Field Engineer at Best Technology Services since
+                    2017. Mostly working ICT Level 1 and 2 jobs in and around Darwin, Northern Territory. This job
+                    requires a wide range of activity including helping customers with computer operation,
+                    Installing new computer and network hardware. Upgrading systems, servers and network devices. Apart
+                    from that making recommendation and report to meet cunsumer requirements. <br><br> I would like to
+                    mentaion that I have developed Time saving skills, technical communication though my experiences in
+                    current job.
+                    <br><br> I was proud to work for NEC's nation wide EFT-Pos machine upgrade project in 2018 where I
+                    had to travel to Alice Spring from Darwin and left my signeture in well known companies like
+                    Woolwoths, Coles, Australia Post, Kmart.
+                    <br><br> Outside my work, I'm a happy Single man :) . <br>I grew up with my younger brother in a
+                    Large City called "Dhaka" in Bangladesh. Console/Computer Games are my favourite. And while im not
+                    doing anything i'll be planting trees/"Gardening" i'd like to say it.
+                    I also like to listen to Passenger, Coldplay and Jhon Denver music.
+                </p>
             </div>
             <div class="job job-1">
                 <h3>Field Technician</h3>
                 <h6>Computer and Network Hrdware installation</h6>
                 <p> </p>
             </div>
-            
+
             <div class="job job-2">
-                    <h3>Customer Service Assistant</h3>
-                    <h6>PC Mart</h6>
-                    <p></p>
-                </div>
-    
-                <div class="job job-3">
-                        <h3>Cashier & Customer Service Assistant</h3>
-                        <h6>Help customers during checkout, Recieve payment for sales</h6>
-                        <p></p>
-                    </div>
+                <h3>Customer Service Assistant</h3>
+                <h6>PC Mart</h6>
+                <p></p>
+            </div>
+
+            <div class="job job-3">
+                <h3>Cashier & Customer Service Assistant</h3>
+                <h6>Help customers during checkout, Recieve payment for sales</h6>
+                <p></p>
+            </div>
         </div>
-       
-        
+
+
 
     </main>
 
     <footer id="main-footer">Copyright &copy; 2019</footer>
     <script src="js/main.js"></script>
 </body>
+
 </html>

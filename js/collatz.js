@@ -1,3 +1,15 @@
+///////////////////////////  Collatz Conjecture ///////////////////////////////////////
+//   Consider the following operation on an arbitrary positive integer:          /////
+//                                                                              /////
+//     If the number is even, divide it by two.                                /////
+//     If the number is odd, triple it and add one.                           /////
+//                                                                           /////
+//  In modular arithmetic notation, define the function f as follows:       /////
+//  For instance, starting with n = 12,                                    /////
+//                one gets the sequence 12, 6, 3, 10, 5, 16, 8, 4, 2, 1.  /////
+//////////////////////////////////////////////////////////////////////////////
+
+
 const leng = 40;
 const weigth = 3;
 const scale = 0.3;
