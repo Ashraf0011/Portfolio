@@ -3,8 +3,6 @@ $secondary-color: #b87408;
 $show-homeimage: ture;
 $home-image: url(../imgs/back2.jpg);
 $background-opacity: 0.95;
-
-
 @mixin colorChange {
     transition: all 0.5s ease-out;
 }
@@ -15,7 +13,6 @@ $background-opacity: 0.95;
 //             background: $home-image;
 //             background-attachment: fixed;
 //             background-size: cover;
-
 //             //  here &:after and &.overlay has the same functions
 //             &:after {
 //                 content: '';
@@ -27,7 +24,6 @@ $background-opacity: 0.95;
 //                 z-index: -1;
 //                 background: rgba($primary-color, $background-opacity);
 //             }
-
 //             // &.overlay{
 //             //     position: absolute;
 //             //     top: 0;
@@ -40,19 +36,15 @@ $background-opacity: 0.95;
 //         }
 //     }
 // }
-
 // Text color determiner function
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
         @return #000;
     }
-
     @else {
         @return #fff;
     }
 }
-
-
 
 // media query mixins
 @mixin mediaSm {
