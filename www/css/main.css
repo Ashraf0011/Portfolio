@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@1,300;1,400&family=Playfair+Display:ital@0;1&display=swap");
 .menu-btn {
   position: absolute;
   right: 35px;
@@ -88,6 +89,12 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.nav-item:nth-child(6) {
+  transition-delay: 0.6s; }
+
 * {
   box-sizing: border-box; }
 
@@ -106,13 +113,14 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 3rem; }
+    font-family: 'Gravitas One', cursive;
+    font-size: 2.3rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(255, 255, 255, 0.5); }
+    background: rgba(255, 255, 255, 0.7); }
 
 a {
   color: #FFFF;
@@ -129,23 +137,37 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.5rem; }
-      main .icons a:hover {
-        color: #b87408;
-        transition: all 0.5s ease-out; }
+  main .icons a {
+    padding: 0.8rem;
+    background: #F2CB05; }
+    main .icons a:hover {
+      color: #b87408;
+      transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 8vh; }
+  main .reg-des {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; }
+  main .l-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100; }
+  main iframe {
+    padding: 5%;
+    width: 45%;
+    height: 600px; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
+  .about-info .l-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100; }
+  .about-info .info-box {
+    font-size: 1.5rem; }
   .about-info .bio-image {
     width: 250px;
     height: 250px;

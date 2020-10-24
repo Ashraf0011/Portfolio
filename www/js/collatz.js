@@ -30,8 +30,6 @@ function setup() {
     strokeWeight(weigth * scale);
     canvas.position(0, 0);
     canvas.style('z-index', '-3');
-
-    //   background("#F2F2F2");
 }
 
 
