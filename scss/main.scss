@@ -2,242 +2,231 @@
 // it will be called as partials. Partials file has different naming systems
 //  _config.scss   is an example.
 // after that we will import that file here just like:
-// 
+//
 //   @import 'config';    we will NOT USE '_config.scss' only 'config'
 
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 // @import 'mobile';  we want the mobile scss run after all elements are being formed so we are going to put it at the end
-@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@1,300;1,400&family=Playfair+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@1,300;1,400&family=Playfair+Display:ital@0;1&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    // @include background();
-    background: $primary-color;
+  // @include background();
+  background: $primary-color;
 
-    color: set-text-color($primary-color);
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-    font-weight: 400;
+  font-weight: 400;
 
-    &.lg-heading {
-        font-family: 'Gravitas One', cursive;
-        font-size: 2.3rem;
-    }
+  &.lg-heading {
+    font-family: "Gravitas One", cursive;
+    font-size: 2.3rem;
+  }
 
-    &.sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        // background: lighten($primary-color, 4);
-        // if we want to see through the color we need to wrap
-        // the color with rgba function 
-        background: rgba(lighten($color: $primary-color, $amount: 10), 0.7)
-    }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    // background: lighten($primary-color, 4);
+    // if we want to see through the color we need to wrap
+    // the color with rgba function
+    background: rgba(lighten($color: $primary-color, $amount: 10), 0.7);
+  }
 }
 
 a {
-    color: #FFFF;
-    text-decoration: none;
+  color: #ffff;
+  text-decoration: none;
 }
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 .text-secondary {
-    color: $secondary-color;
+  color: $secondary-color;
 }
 
 main {
-    padding: 4rem;
-    min-height: calc(100vh - 60px);
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
 
-    .icons {
-        // margin-top: 1.2rem;
+  .icons {
+    // margin-top: 1.2rem;
 
+    a {
+      padding: 0.8rem;
+      background: $background-fade;
 
-        a {
-            padding: 0.8rem;
-            background: $background-fade;
-
-
-            &:hover {
-                color: $secondary-color;
-                @include colorChange();
-            }
-        }
+      &:hover {
+        color: $secondary-color;
+        @include colorChange();
+      }
     }
+  }
 
-    &#home {
-        overflow: hidden;
+  &#home {
+    overflow: hidden;
 
-        h1 {
-            margin-top: 8vh;
-        }
+    h1 {
+      margin-top: 8vh;
     }
+  }
 
+  .reg-des {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
 
-    .reg-des {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-    }
+  .l-text {
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+  }
 
-    .l-text {
-        font-family: 'Playfair Display', serif;
-        font-weight: 100;
-    }
-
-    iframe {
-        padding: 5%;
-        width: 45%;
-        height: 600px;
-    }
+  iframe {
+    padding: 5%;
+    width: 45%;
+    height: 600px;
+  }
 }
 
-
 .about-info {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas:
-        'bioimage bio bio'
-        'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
 
+  .l-text {
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+  }
 
-    .l-text {
-        font-family: 'Playfair Display', serif;
-        font-weight: 100;
-    }
+  .info-box {
+    font-size: 1.5rem;
+  }
 
-    .info-box {
+  .bio-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+    grid-area: bioimage;
+  }
 
-        font-size: 1.5rem;
-    }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
 
-    .bio-image {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        border: $secondary-color 3px solid;
-        grid-area: bioimage;
-    }
+  .job-1 {
+    grid-area: job1;
+    border-bottom: $secondary-color 3px solid;
+  }
 
-    .bio {
-        grid-area: bio;
-        font-size: 1.5rem;
-    }
+  .job-2 {
+    grid-area: job2;
+    border-bottom: $secondary-color 3px solid;
+  }
 
-    .job-1 {
-        grid-area: job1;
-        border-bottom: $secondary-color 3px solid;
-    }
+  .job-3 {
+    grid-area: job3;
+    border-bottom: $secondary-color 3px solid;
+  }
 
-    .job-2 {
-        grid-area: job2;
-        border-bottom: $secondary-color 3px solid;
-    }
-
-    .job-3 {
-        grid-area: job3;
-        border-bottom: $secondary-color 3px solid;
-    }
-
-    .job {
-        background: lighten($color: $primary-color, $amount: 5);
-        padding: 0.6rem;
-    }
+  .job {
+    background: lighten($color: $primary-color, $amount: 5);
+    padding: 0.6rem;
+  }
 }
 
 // work projects
 .projects {
-    display: grid;
-    grid-gap: 0.8rem;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(3, 1fr);
 
-    img {
-        width: 100%;
-        border: 3px #FFFF solid;
+  img {
+    width: 100%;
+    border: 3px #ffff solid;
 
-        &:hover {
-            opacity: 0.5;
-            border: $secondary-color;
-            // @include colorChange();
-        }
+    &:hover {
+      opacity: 0.5;
+      border: $secondary-color;
+      // @include colorChange();
     }
+  }
 }
 
 // contract page
 .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 0.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.2rem;
 
-    div {
-        font-size: 2rem;
-        border: 3px #fff solid;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 2rem;
-        @include colorChange();
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 2rem;
+    @include colorChange();
 
-        &:hover {
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
 
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
-
-            span {
-                color: set-text-color($secondary-color);
-            }
-        }
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
+  }
 }
-
 
 // button styleing
 .btn {
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.3rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
 
-    &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-
-    }
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
 }
 
 .btn-light {
-    @extend .btn;
-    background: darken($color: $primary-color, $amount: 20);
-    color: #FFFF;
+  @extend .btn;
+  background: darken($color: $primary-color, $amount: 20);
+  color: #ffff;
 }
 
 .btn-dark {
-    @extend .btn;
-    background: lighten($color: $primary-color, $amount: 20);
-    color: #333333;
+  @extend .btn;
+  background: lighten($color: $primary-color, $amount: 20);
+  color: #333333;
 }
-
-
 
 #main-footer {
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 3);
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 3);
 }
 
-@import 'mobile';
+@import "mobile";
